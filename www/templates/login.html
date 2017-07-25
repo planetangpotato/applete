@@ -1,0 +1,46 @@
+
+
+  <ion-item  style="background: rgb(22,50,62); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;max-width: 100%;max-height: 100%; ">
+ 
+
+  <div><br><br><br>
+ 
+  <center>
+
+<img src="img/GC.png" height="55%;" width="55%;">
+</center>
+
+<br><br>
+<div class="row">
+<div class="col col-5"></div>
+
+<div class="padding list col col-90" ng-controller="login">
+  <form ng-submit="loginform()">
+    <p style="color:black;">{{error}}</p>
+
+          
+            <label class="item item-input" style="border-radius: 15px; color: #42bcf4; text-align: center; border-bottom-color: black; border-top-color: black; border-left-color:transparent; border-right-color: transparent; border-width: 3px; background-color: transparent; ">
+              <input type ="text" ng-model="username" placeholder="Username" style="text-align: center; font-family: Lucida Fax;" required>
+            </label>
+            <br>
+            <label class="item item-input" style="border-radius: 15px; color: #42bcf4; text-align: center; border-bottom-color: black; border-top-color: black; border-left-color:transparent; border-right-color: transparent; border-width: 3px; background-color: transparent; ">
+              <input type ="password" ng-model="password" placeholder="Password" style="text-align: center; font-family: Lucida Fax;" required>
+            </label>
+            
+            <button type="submit" class="button button-block " style="background: rgb(150,79,8);border-color: black;border-radius: 25px; color:white; font-family: Lucida Fax;">
+            LOGIN
+            </button><br>
+            <form ng-submit="changelogin()">
+              <a type="submit" href="#/adminlogin" class="button button-block button-default" style="border-radius: 200px;">
+              Login as user
+              </a>
+            </form>
+          
+  </form>
+</div>
+<div class="col col-5"></div>
+</div>
+</div>
+</ion-item>
+
+

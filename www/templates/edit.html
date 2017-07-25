@@ -1,0 +1,47 @@
+
+<ion-header-bar class="bar-balanced" align-title="center" style="background:url(img/ds.png);">
+    <h1 class="title" style="font-size:23px;font-family: Elephant">EDIT</h1>
+</ion-header-bar>
+
+<ion-content class="padding" style="background: url(img/ee.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;max-width: 100%;max-height: 100%;">
+
+
+<div class="list card" style="border-radius: 20px;">
+  <div class="item item-body">
+    <label class="item item-input item-stacked-label">
+        <span class="input-label" style="color: black;font-weight: bold;text-transform: uppercase; font-family: Lucida Fax;">ID</span>
+        <input type="text" placeholder="ID" ng-model="datas.id" id="id" style="font-family: Lucida Fax;" readonly>
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label" style="color: black;font-weight: bold;text-transform: uppercase; font-family: Lucida Fax;">Title</span>
+        <textarea rows="2" cols="50" ng-model="datas.title" placeholder="Title" id="title" style="font-family: Lucida Fax;">
+        </textarea>
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label" style="color: black;font-weight: bold;text-transform: uppercase; font-family: Lucida Fax;">Date</span>
+        <input type="text" ng-model="datas.dated" placeholder="Date" id="dated" style="font-family: Lucida Fax;">
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label" style="color: black;font-weight: bold;text-transform: uppercase; font-family: Lucida Fax;">Description</span>
+        <textarea rows="15" cols="50" style="font-family: Lucida Fax;" ng-model="datas.description" placeholder="Description" id="description">
+        </textarea>
+    </label>
+  </div>
+
+</div> 
+
+  <div class="row">
+    
+      <div class="col col-50">
+        <a class="button button-block button-light" href="#/app/adfeed" style="background: rgb(150,79,8);border-color: black;border-radius: 25px; color:white; font-family: Lucida Fax;">BACK</a>
+
+      </div>
+      <div class="col col-50">
+        <a class="button button-block button-balanced" ng-click="edits()" href="#/app/adfeed" style="background: rgb(150,79,8);border-color: black;border-radius: 25px; color:white; font-family: Lucida Fax;">UPDATE</a>
+      </div>
+    </div>
+ 
+
+
+ <br>
+</ion-content>

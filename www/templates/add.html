@@ -1,0 +1,39 @@
+<ion-header-bar class="bar-balanced" align-title="center" style="background:url(img/ds.png);">
+    <h1 class="title" style="font-size:23px;font-family: Elephant">ANNOUCEMENT</h1>
+</ion-header-bar>
+
+<ion-view view-title="POST" ng-controller= 'addco' style="text-align:center; background-image:url(img/ee.jpg); background-repeat; background-size: cover;">
+	<ion-content>
+		<br>
+			<div class="list card" style="border-radius: 20px; ">
+  <div class="item" s>
+    <label class="item item-input item-floating-label" >
+    <span class="input-label" style="font-weight: bold;color: black;text-transform: uppercase; font-family: Lucida Fax;">Title</span>
+      <input type="text" ng-model="data.title" placeholder="Title" style="font-family: Lucida Fax; ">
+    </label>
+    <label class="item item-input item-floating-label">
+    <span class="input-label" style="font-weight: bold;color: black;text-transform: uppercase; font-family: Lucida Fax;">Date</span>
+      <input type="date" ng-model="data.dated" placeholder="Date" style="font-family: Lucida Fax;">
+    </label>
+  </div>
+  <div class="item item-body">
+    <label class="item item-input item-floating-label">
+      <span class="input-label" style="font-weight: bold;color: black;text-transform: uppercase; font-family: Lucida Fax;">Description</span>
+        <textarea rows="10" cols="50" ng-model="data.description" placeholder="Description" style="font-family: Lucida Fax;"></textarea>
+    </label>
+  </div>
+  <div class="row">
+    
+      <div class="col col-50">
+				<button ng-click="adda()" class="button button-block " href="#/app/adfeed" style="background: rgb(150,79,8);border-color: black;border-radius: 25px; color:white; font-family: Lucida Fax; margin-left: 80px;" >
+				Post
+				</button>
+        </div>
+        </div>
+			</div>
+			
+			
+			
+						
+	</ion-content>
+</ion-view>

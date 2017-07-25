@@ -1,0 +1,50 @@
+
+ <ion-header-bar view-title="GC APPLETE" class="bar-balanced" align-title="center" style="background:url(img/ds.png); ">
+    <h1 class="title" style="font-size:23px;font-family: Elephant">GC APPLETE</h1>
+</ion-header-bar>
+
+<div class="tabs-striped tabs-top ">
+  <div class="tabs">
+    <a class="tab-item active" href="#/app/adfeed" style="font-family: Lucida Fax; ">
+        NEWS FEED
+    </a>
+    <a class="tab-item" href="#/app/adposts" style="font-family: Lucida Fax; ">
+        FACEBOOK POSTS
+    </a>
+  </div>
+</div>
+<ion-content class="padding" style="background: url(img/ee.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;max-width: 100%;max-height: 100%; "><br><br><br>
+ <div class="row">
+     <!--  <div class="col col-50">
+      </div> -->
+      <div class="col ">
+        <label class="item item-input" style="border-radius: 5px;">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="text" placeholder="Search" ng-model="search" style="font-family: Lucida Fax; " >
+        </label>
+      </div>
+    </div>
+
+<div  ng-repeat="x in posts | filter: search">
+<div class="list card" >
+  <div class="item item-avatar item-text-wrap" style="background: rgb(92,164,172);">
+    <img src="img/profile.png">
+    <p style="font-weight: bold;font-size:20px;font-family: Lucida Fax ;color: black; ">{{x.title}}</p>
+   <p style="width: 100%;color: black;font-size:14px;font-family: Lucida Fax">{{x.dated}}</p>
+  </div>
+  <div class="item item-body item-text-wrap" >
+    <p style="font-size:16px;color: black;text-indent: 15px;line-height: 25px; font-family: Lucida Fax "> {{x.description}}</p>
+  </div>
+
+  <div class="row" >
+    <div class="col"><a class="button icon ion-edit" ng-click="edit(x.id)" style="color: black;"></a></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"><button ng-click="deleted(x.id)" class="button icon ion-trash-b" style="color: black;"></button></div>
+  </div> 
+  </div> 
+</div>
+<br>
+</ion-content>
+
