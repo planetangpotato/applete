@@ -11,7 +11,7 @@ angular.module('starter.controllers', ['ionic'])
   var title= $scope.data.title;
   var dated = $scope.data.dated;
   var description = $scope.data.description;
-  $http.post('http://'+localStorage.getItem('server')+'/applete/php/add.php?title='+title+'&dated='+dated+'&description='+description)
+  $http.post('https://hannahreyes43.000webhostapp.com/add.php?title='+title+'&dated='+dated+'&description='+description)
     console.log(title+dated+description);
     $scope.data = {};
   }
@@ -32,7 +32,7 @@ function done() {
 }
 function updates(){
 
- $http.get('http://'+localStorage.getItem('server')+'/applete/php/posts.php')
+ $http.get('https://hannahreyes43.000webhostapp.com/posts.php')
  .then(function(b){
   console.log(b.data);
   $scope.posts = b.data;
@@ -40,7 +40,7 @@ function updates(){
 }
 $scope.deleted = function (b){
   // alert("a"); 
-   $http.get('http://'+localStorage.getItem('server')+'/applete/php/deleteposts.php?id='+b)
+   $http.get('https://hannahreyes43.000webhostapp.com/deleteposts.php?id='+b)
 }
 
 })
@@ -59,7 +59,7 @@ function done() {
 }
 function updates(){
 
- $http.get('http://'+localStorage.getItem('server')+'/php/posts.php')
+ $http.get('https://hannahreyes43.000webhostapp.com/posts.php')
  .then(function(a){
   console.log(a.data);
   $scope.posts = a.data;
@@ -73,7 +73,7 @@ function updates(){
 .controller('editposts', function($scope,$http) {
 
   var a = JSON.parse(localStorage.getItem("editpost"));
-  $http.get('http://'+localStorage.getItem('server')+'/applete/php/editpostdata.php?id='+a)
+  $http.get('https://hannahreyes43.000webhostapp.com/editpostdata.php?id='+a)
   .then(function(a){
     console.log(a.data);
     document.getElementById('id').value = a.data[0]['id'];
@@ -85,7 +85,7 @@ function updates(){
 
  $scope.edit = function(a){
   
-   $http.get('http://'+localStorage.getItem('server')+'/applete/php/editedposts.php?id='+a)
+   $http.get('https://hannahreyes43.000webhostapp.com/editedposts.php?id='+a)
  .then(function(a){
   console.log(a.data[0]);
   document.getElementById('title').value = a.data[0]['title'];
@@ -104,7 +104,7 @@ function updates(){
   var dated = document.getElementById('dated').value ;
   var description = document.getElementById('description').value;
   
-  $http.post('http://'+localStorage.getItem('server')+'/applete/php/edit.php?id='+id+'&title='+title+'&dated='+dated+'&description='+description)
+  $http.post('https://hannahreyes43.000webhostapp.com/edit.php?id='+id+'&title='+title+'&dated='+dated+'&description='+description)
  document.getElementById('title').value = '';
   document.getElementById('dated').value = '';
   document.getElementById('description').value ='';
@@ -124,7 +124,7 @@ function done() {
 }
 function updates(){
 
- $http.get('http://'+localStorage.getItem('server')+'/applete/php/posts.php')
+ $http.get('https://hannahreyes43.000webhostapp.com/posts.php')
  .then(function(a){
   console.log(a.data);
   $scope.posts = a.data;
@@ -146,7 +146,7 @@ function updates(){
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://'+localStorage.getItem('server')+'/applete/php/adminlogin.php',
+        url: 'https://hannahreyes43.000webhostapp.com/adminlogin.php',
         method: "POST",
         data: {
             'username' : username,
@@ -182,7 +182,7 @@ function updates(){
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://'+localStorage.getItem('server')+'/applete/php/login.php',
+        url: 'https://hannahreyes43.000webhostapp.com/login.php',
         method: "POST",
         data: {
             'username' : username,
@@ -247,7 +247,7 @@ TTS
     }, 200);
   }
   function updates(){
-    $http.get('http://'+localStorage.getItem('server')+'/applete/php/posts.php')
+    $http.get('https://hannahreyes43.000webhostapp.com/posts.php')
     .then(function(a){
       console.log(a.data);
       $scope.posts = a.data;
